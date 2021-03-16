@@ -3,6 +3,7 @@ import PuffLoader from "react-spinners/PuffLoader";
 import React from "react";
 import PropTypes from 'prop-types';
 import "./Loading.scss"
+import "assets/styles/index.scss"
 
 const override = css`
   margin: auto;
@@ -24,7 +25,7 @@ Loading.defaultProps = {
 function Loading(props){
     console.log(typeof(PuffLoader));
     return (
-        <div className="background-loading">
+        <div className="background-loading f-screen-background">
           <props.LoadingComponent css={override} size={props.size} />
         </div>
     );
